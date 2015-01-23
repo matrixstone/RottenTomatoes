@@ -17,7 +17,10 @@
     [self.window makeKeyAndVisible];
     
     MoviesController *vc=[[MoviesController alloc]init];
-    self.window.rootViewController=vc;
+    
+    UINavigationController *nvc=[[UINavigationController alloc]initWithRootViewController:vc];
+    
+    self.window.rootViewController=nvc;
     
     return YES;
 }
