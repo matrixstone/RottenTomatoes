@@ -13,4 +13,9 @@ Completed functions:
    
    4. User can pull to refresh the movie list 
  
- * [x] Optional: Add a tab bar for Box Office and DVD. 
+ * [x] Optional: Add a tab bar for Box Office and DVD.
+ 
+ ![Video Walkthrough](rottentomatoes.gif)
+ 
+ GIF created with [LiceCap](http://www.cockos.com/licecap/).
+  
