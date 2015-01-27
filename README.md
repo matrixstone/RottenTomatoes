@@ -14,6 +14,11 @@ Completed functions:
    4. User can pull to refresh the movie list 
  
  * [x] Optional: Add a tab bar for Box Office and DVD.
+
+ * [x] Rotten Tomatoes API
+
+ * [x] AFNetworking
+
  
  ![Video Walkthrough](rottentomatoes.gif)
  
