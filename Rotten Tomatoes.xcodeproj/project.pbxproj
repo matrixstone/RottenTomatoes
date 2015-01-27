@@ -25,6 +25,13 @@
 		8BD08D7C1A722F6000F6E35A /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BD08D7B1A722F6000F6E35A /* MovieCell.xib */; };
 		8BD08D801A7240E600F6E35A /* MovieDetailedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD08D7E1A7240E600F6E35A /* MovieDetailedController.m */; };
 		8BD08D811A7240E600F6E35A /* MovieDetailedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BD08D7F1A7240E600F6E35A /* MovieDetailedController.xib */; };
+		8BE3F0221A775A7A004ABFC2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE3F0211A775A7A004ABFC2 /* SystemConfiguration.framework */; };
+		8BE3F0251A775B0C004ABFC2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE3F0241A775B0C004ABFC2 /* Reachability.m */; };
+		8BE3F0291A7765DE004ABFC2 /* SecondView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE3F0271A7765DE004ABFC2 /* SecondView.m */; };
+		8BE3F02A1A7765DE004ABFC2 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE3F0281A7765DE004ABFC2 /* SecondView.xib */; };
+		8BE3F02D1A77674F004ABFC2 /* TabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE3F02C1A77674F004ABFC2 /* TabController.m */; };
+		8BE3F0351A7770AF004ABFC2 /* movie.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BE3F0341A7770AF004ABFC2 /* movie.png */; };
+		8BE3F0371A7770B3004ABFC2 /* dvd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BE3F0361A7770B3004ABFC2 /* dvd.png */; };
 		F110EA1CD5681AE09336C8AC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92779A002733E681E8EA2EB6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +73,16 @@
 		8BD08D7D1A7240E600F6E35A /* MovieDetailedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailedController.h; sourceTree = "<group>"; };
 		8BD08D7E1A7240E600F6E35A /* MovieDetailedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailedController.m; sourceTree = "<group>"; };
 		8BD08D7F1A7240E600F6E35A /* MovieDetailedController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailedController.xib; sourceTree = "<group>"; };
+		8BE3F0211A775A7A004ABFC2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8BE3F0231A775B0C004ABFC2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8BE3F0241A775B0C004ABFC2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		8BE3F0261A7765DE004ABFC2 /* SecondView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondView.h; sourceTree = "<group>"; };
+		8BE3F0271A7765DE004ABFC2 /* SecondView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondView.m; sourceTree = "<group>"; };
+		8BE3F0281A7765DE004ABFC2 /* SecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
+		8BE3F02B1A77674F004ABFC2 /* TabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabController.h; path = ../TabController.h; sourceTree = "<group>"; };
+		8BE3F02C1A77674F004ABFC2 /* TabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabController.m; path = ../TabController.m; sourceTree = "<group>"; };
+		8BE3F0341A7770AF004ABFC2 /* movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie.png; sourceTree = "<group>"; };
+		8BE3F0361A7770B3004ABFC2 /* dvd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dvd.png; sourceTree = "<group>"; };
 		92779A002733E681E8EA2EB6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE3F0221A775A7A004ABFC2 /* SystemConfiguration.framework in Frameworks */,
 				8BD08D3B1A72214400F6E35A /* CoreGraphics.framework in Frameworks */,
 				8BD08D3D1A72214400F6E35A /* UIKit.framework in Frameworks */,
 				8BD08D391A72214400F6E35A /* Foundation.framework in Frameworks */,
@@ -117,6 +135,7 @@
 		8BD08D371A72214400F6E35A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BE3F0211A775A7A004ABFC2 /* SystemConfiguration.framework */,
 				8BD08D381A72214400F6E35A /* Foundation.framework */,
 				8BD08D3A1A72214400F6E35A /* CoreGraphics.framework */,
 				8BD08D3C1A72214400F6E35A /* UIKit.framework */,
@@ -129,6 +148,10 @@
 		8BD08D3E1A72214400F6E35A /* Rotten Tomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				8BE3F02B1A77674F004ABFC2 /* TabController.h */,
+				8BE3F0341A7770AF004ABFC2 /* movie.png */,
+				8BE3F0361A7770B3004ABFC2 /* dvd.png */,
+				8BE3F02C1A77674F004ABFC2 /* TabController.m */,
 				8BD08D721A722E6C00F6E35A /* MovieCell.h */,
 				8BD08D731A722E6C00F6E35A /* MovieCell.m */,
 				8BD08D7B1A722F6000F6E35A /* MovieCell.xib */,
@@ -142,6 +165,11 @@
 				8BD08D7D1A7240E600F6E35A /* MovieDetailedController.h */,
 				8BD08D7E1A7240E600F6E35A /* MovieDetailedController.m */,
 				8BD08D7F1A7240E600F6E35A /* MovieDetailedController.xib */,
+				8BE3F0231A775B0C004ABFC2 /* Reachability.h */,
+				8BE3F0241A775B0C004ABFC2 /* Reachability.m */,
+				8BE3F0261A7765DE004ABFC2 /* SecondView.h */,
+				8BE3F0271A7765DE004ABFC2 /* SecondView.m */,
+				8BE3F0281A7765DE004ABFC2 /* SecondView.xib */,
 			);
 			path = "Rotten Tomatoes";
 			sourceTree = "<group>";
@@ -262,6 +290,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE3F0371A7770B3004ABFC2 /* dvd.png in Resources */,
+				8BE3F0351A7770AF004ABFC2 /* movie.png in Resources */,
+				8BE3F02A1A7765DE004ABFC2 /* SecondView.xib in Resources */,
 				8BD08D511A72214400F6E35A /* Images.xcassets in Resources */,
 				8BD08D711A72224C00F6E35A /* MoviesController.xib in Resources */,
 				8BD08D811A7240E600F6E35A /* MovieDetailedController.xib in Resources */,
@@ -320,8 +351,11 @@
 			files = (
 				8BD08D701A72224C00F6E35A /* MoviesController.m in Sources */,
 				8BD08D801A7240E600F6E35A /* MovieDetailedController.m in Sources */,
+				8BE3F0291A7765DE004ABFC2 /* SecondView.m in Sources */,
 				8BD08D491A72214400F6E35A /* AppDelegate.m in Sources */,
 				8BD08D741A722E6C00F6E35A /* MovieCell.m in Sources */,
+				8BE3F02D1A77674F004ABFC2 /* TabController.m in Sources */,
+				8BE3F0251A775B0C004ABFC2 /* Reachability.m in Sources */,
 				8BD08D451A72214400F6E35A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,15 +10,62 @@
 #import "MovieCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "MovieDetailedController.h"
+#import "Reachability.h"
 //helper method cateogry
 
 @interface MoviesController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *names;
 @property (nonatomic, strong) NSArray *movies;
+//@property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (nonatomic, strong) Reachability *internetReachableFoo;
 @end
 
 @implementation MoviesController
+
+// Checks if we have an internet connection or not
+- (Boolean)testInternetConnection
+{
+    self.internetReachableFoo = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    // Internet is reachable
+    self.internetReachableFoo.reachableBlock = ^(Reachability*reach)
+    {
+        // Update the UI on the main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"Yayyy, we have the interwebs!");
+        });
+    };
+
+    
+    
+    // Internet is not reachable
+    self.internetReachableFoo.unreachableBlock = ^(Reachability*reach)
+    {
+        // Update the UI on the main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"Someone broke the internet :(");
+            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Net working error!"
+                                                               message:@"We are experiencing net working error!"
+                                                              delegate:self
+                                                     cancelButtonTitle:@"OK"
+                                                     otherButtonTitles:nil];
+            [theAlert show];
+            
+        });
+    };
+    
+    Boolean result=[self.internetReachableFoo startNotifier];
+//    if (self.internetReachableFoo.reachableBlock) {
+//        return 1;
+//    }else if (self.internetReachableFoo.unreachableBlock){
+//        return 0;
+//    }else{
+//        return -1;
+//    }
+    return result;
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,8 +95,32 @@
     self.tableView.dataSource = self;
     self.tableView.rowHeight=184;
     self.tableView.delegate = self;
+    NSLog(@"Load Data");
+    Boolean connectionResult = [self testInternetConnection];
+//    NSLog(connectionResult? @"Yes we have the internet" : @"No we dont have the internet");
     
     [self.tableView registerNib:[UINib nibWithNibName:@"MovieCell" bundle:nil] forCellReuseIdentifier:@"MovieCell"] ;
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                        init];
+    refreshControl.attributedTitle = [[NSAttributedString alloc]initWithString:@"pull to Refresh"];
+    [refreshControl addTarget:self action:@selector(refreshView:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl];
+//    if (self.refreshControl) {
+//        [self.refreshControl endRefreshing];
+////        [self.refreshControl removeFromSuperview];
+//    }
+    
+}
+
+- (void)refreshView:(UIRefreshControl *)controller
+{
+    NSLog(@"Test for refreshing");
+    [self viewDidLoad];
+//    [self performSelector:@selector(endRefreshing:) withObject:nil afterDelay:1];
+    sleep(2);
+    [controller endRefreshing];
+//    NSLog(@"end refreshing");
 }
 
 - (void)didReceiveMemoryWarning
